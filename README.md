@@ -1,8 +1,8 @@
 # qmt-knowledge-skill
 
-> **迅投 QMT 极速策略交易系统 — AI Agent 智能知识技能包**
->
-> 为 AI Agent（如 Trae 等）提供结构化的 QMT Python 3.6 API 知识库，实现 API 查询、策略代码生成、回测/实盘配置指导、枚举常量查档、常见问题排查等能力。
+**迅投 QMT 极速策略交易系统 — AI Agent 智能知识技能包**
+
+为 AI Agent提供结构化的 讯投QMT API 知识库，实现 API 查询、策略代码生成、回测/实盘配置指导、枚举常量查档、常见问题排查等能力。
 
 ---
 
@@ -54,32 +54,21 @@ qmt-knowledge-skill/
 
 ---
 
-## 🚀 使用方式
 
-### 方式一：作为 Trae AI Agent Skill 安装（推荐）
 
-1. **克隆或放置本仓库到你的工作区**：
-   ```bash
-   cd your-workspace
-   git clone <your-repo-url> qmt-knowledge-skill
-   ```
+## 安装 Skill 到 AI Agent
 
-2. **将 `SKILL.md` 和 `knowledge/` 一起放入工作区根目录**（或直接在本仓库目录下工作）。
+命令 1：
 
-3. **触发方式**：在 Trae 中当你提出涉及 QMT 的问题时，Agent 会自动识别并调用本 Skill：
-   - 写 QMT 策略代码 → 自动按 GBK 编码 + init/handlebar 结构生成
-   - 查询 API 参数 → 自动从对应 md 文档中读取准确枚举值
-   - 遇到报错 → 自动走异常排查流程定位问题
+```
+openclaw skills install @he-yang/qmt-knowledge-skill
+```
 
-### 方式二：直接查阅文档（纯人工使用）
+命令 2：
 
-无需 AI Agent，直接打开 `knowledge/` 目录下的 md 文件查阅即可。推荐的查阅路径：
-
-- **入门新手**：`knowledge/01-入门/快速开始.md` → `QMT新人上手教程.md` → `完整示例.md`
-- **写策略代码**：先看 `交易函数.md`（下单）+ `行情函数.md`（取数）+ `枚举常量.md`（参数值）
-- **查报错**：直接搜 `常见问题.md`
-
----
+```
+npx skills add https://clawhub.ai/he-yang/skills/qmt-knowledge-skill
+```
 
 ## 📋 QMT 策略代码核心约束（重点）
 
