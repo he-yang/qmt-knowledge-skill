@@ -2,13 +2,16 @@
 
 **迅投 QMT 极速策略交易系统 — AI Agent 智能知识技能包**
 
-为 AI Agent提供结构化的 讯投QMT API 知识库，实现 API 查询、策略代码生成、回测/实盘配置指导、枚举常量查档、常见问题排查等能力。
+[![Version](https://img.shields.io/badge/version-0.2.0-blue.svg)](https://clawhub.ai/he-yang/skills/qmt-knowledge-skill)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
+
+为 AI Agent提供结构化的 讯投QMT API 知识库，实现 API 查询、策略代码生成、回测/实盘配置指导、枚举常量查档、常见问题排查等能力。**本 Skill 仅基于本地知识库作答，不进行任何外部网络抓取**。
 
 ---
 
 ## ✨ 功能特性
 
-本 Skill 适用于以下所有场景：
+本 Skill **仅在用户主动提出 QMT 相关需求时激活**，不主动介入非 QMT 上下文。适用场景如下：
 
 | 场景 | 示例问题 |
 |---|---|
@@ -152,3 +155,23 @@ QMT、迅投 为迅投公司或其关联公司的商标。本项目仅为社区�
 ## 📄 License
 
 MIT License
+
+---
+
+## 📋 Changelog
+
+### v0.1.0 (2026-08-11)
+首次发布
+
+### v0.2.0 (2026-08-12)
+
+#### 安全加固
+- **移除外部 WebFetch Fallback 机制**，改为纯本地知识库模式，不进行任何外部网络抓取
+- **收紧触发条件**：description 与 README 措辞改为"用户明确请求 / 主动提出"时才激活，不主动介入非 QMT 上下文
+- **下单示例就近强警告**：所有含 `passorder` / `quickTrade=2` 的代码块紧邻位置添加 🚫 高风险警示框
+- **敏感字段脱敏**：账号 ID、AccountKey、委托号、资产金额等在示例输出中全部脱敏
+- **维护性操作警示**：Lib 文件夹删除、策略导出导入章节补充破坏性/IP 敏感性提示
+
+#### 结构优化
+- SKILL.md 新增「下单示例安全默认」强制约束章节
+- README 功能特性表顶部增加激活范围限定说明
