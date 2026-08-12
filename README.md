@@ -59,19 +59,29 @@ qmt-knowledge-skill/
 
 
 
-## 安装 Skill 到 AI Agent
+## 安装 Skill 到 AI 工具
 
-命令 1：
+安装方法 1， 使用命令行安装：
 
 ```
 openclaw skills install @he-yang/qmt-knowledge-skill
 ```
 
-命令 2：
+安装方法 2， 使用命令行安装：
 
 ```
 npx skills add https://clawhub.ai/he-yang/skills/qmt-knowledge-skill
 ```
+
+安装方法 3， 自行导入安装：
+
+下载项目代码：
+1. 从本github 仓库直接克隆；
+2. 从夸克网盘下载： [https://pan.quark.cn/s/a9103f859084](https://pan.quark.cn/s/a9103f859084)
+
+下载后，将项目代码导入到 AI 工具中。
+
+比如 workbuddy， 找到左侧的`专家·技能·连接器`，点击上侧的`技能`，点击`添加技能` -> `上传技能`，然后导入下载的代码。
 
 ## 📋 QMT 策略代码核心约束（重点）
 
